@@ -1,0 +1,99 @@
+# Compose file odoo Ultranet v13.0 + https
+# Ojo hay que crear el /odoo_ar/traefik/acme.json y ponerle chmod 600
+# Version 2021-11-11
+#################################################################################
+
+version: '3.5'
+
+services:
+  traefik:
+    image: traefik:2.3.7
+    container_name: traefik
+    restart: unless-stopped
+    command:
+      - --entrypoints.web.address=:80
+      - --entryPoints.websecure.address=:443
+
+      #- --log.level=DEBUG # Don't do that in production
+      - --providers.docker
+      # - --api.insecure # Don't do that in production
+      # - --api.debug # Don't do that in production
+
+      - --certificatesresolvers.le.acme.email=lbozzi@gmail.com
+      - --certificatesresolvers.le.acme.storage=/opt/traefik/acme.json
+      - --certificatesresolvers.le.acme.httpChallenge=true
+      - --certificatesresolvers.le.acme.httpChallenge.entryPoint=web
+      #- --certificatesresolvers.le.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory # descoment for staging
+    ports:
+      - "80:80"
+      - "443:443"
+      # - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /odoo_ar/traefik/:/opt/traefik/
+
+  postgres:
+    image: postgres:11.1-alpine
+    container_name: pg-ultranet
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+    volumes:
+      - ${PROJECT_PATH}/postgresql:/var/lib/postgresql/data
+
+  odoo:
+    image: ${ODOO_IMAGE}
+    container_name: odoo
+    restart: unless-stopped
+    volumes:
+      - ${PROJECT_PATH}/config:/opt/odoo/etc/
+      - ${PROJECT_PATH}/data_dir:/opt/odoo/data
+      - ${PROJECT_PATH}/log:/var/log/odoo
+      - ${PROJECT_PATH}/sources:/opt/odoo/custom-addons
+      - ${PROJECT_PATH}/backup_dir:/var/odoo/backups/
+    links:
+      - postgres:db
+    environment:
+      - SERVER_MODE=
+    labels:
+      # router rou-odoo --> Acceso a odoo en puerto 80
+      - traefik.http.routers.rou-odoo.rule=Host(`${SITE_DOMAIN}`)
+      - traefik.http.routers.rou-odoo.entrypoints=web
+      - traefik.http.routers.rou-odoo.service=srv-odoo-secure
+
+      # router rou-chat --> Acceso a /longpolling en puerto 80
+      - traefik.http.routers.rou-chat.rule=Host(`${SITE_DOMAIN}`) && PathPrefix(`/longpolling`)
+      - traefik.http.routers.rou-chat.entrypoints=web
+      - traefik.http.routers.rou-chat.service=srv-chat-secure
+
+      # Middleware para comprimir paginas.
+      - traefik.http.middlewares.compress.compress=true
+
+      # Middleware para redireccionar redireccion http -> https
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true
+
+      # Asigno los middlewares de redireccion a los routers
+      - traefik.http.routers.rou-odoo.middlewares=redirect-to-https@docker
+      - traefik.http.routers.rou-chat.middlewares=redirect-to-https@docker
+
+      # router rou-odoo-secure --> Acceso a odoo en puerto 443
+      - traefik.http.routers.rou-odoo-secure.rule=Host(`${SITE_DOMAIN}`)
+      - traefik.http.routers.rou-odoo-secure.tls=true
+      - traefik.http.routers.rou-odoo-secure.tls.certresolver=le
+      - traefik.http.routers.rou-odoo-secure.entrypoints=websecure
+
+      # Redirecciona rou-odoo-secure al puert 8069 donde escucha odoo
+      - traefik.http.routers.rou-odoo-secure.service=srv-odoo-secure
+      - traefik.http.services.srv-odoo-secure.loadbalancer.server.port=8069
+
+      # Router rou-chat-secure --> Acceso a odoo en puerto 443
+      - traefik.http.routers.rou-chat-secure.rule=(Host(`${SITE_DOMAIN}`)) && PathPrefix(`/longpolling`)
+      - traefik.http.routers.rou-chat-secure.tls=true
+      - traefik.http.routers.rou-chat-secure.tls.certresolver=le
+      - traefik.http.routers.rou-chat-secure.entrypoints=websecure
+
+      # redirecciona rout-chat-secure al puerto 8072 donde odoo escucha el longpolling
+      - traefik.http.routers.rou-chat-secure.service=srv-chat-secure
+      - traefik.http.services.srv-chat-secure.loadbalancer.server.port=8072
