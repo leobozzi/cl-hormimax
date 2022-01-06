@@ -57,6 +57,7 @@
         'l10n_ar_ux',
         'l10n_ar_afipws',
         'l10n_ar_afipws_fe',
+        'l10n_ar_edi_ux',
         'l10n_ar_bank',
         'l10n_ar_sale',
         'l10n_ar_sale_order_type',
@@ -203,6 +204,7 @@
         'https://github.com/ingadhoc/odoo-argentina ingadhoc-odoo-argentina',
 
         'https://github.com/ingadhoc/odoo-argentina-ce ingadhoc-odoo-argentina-ce',
+        'https://github.com/ingadhoc/odoo-argentina-ee ingadhoc-odoo-argentina-ee',
         # 'https://github.com/ingadhoc/partner ingadhoc-partner',
         'https://github.com/ingadhoc/product ingadhoc-product',
         # 'https://github.com/ingadhoc/project ingadhoc-project',
