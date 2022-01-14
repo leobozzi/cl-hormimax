@@ -18,7 +18,7 @@
 #
 # -----------------------------------------------------------------------------------
 {
-    'name': 'hormimax',
+    'name': 'hormimax_15',
     'version': '15.0.1.0.0',
     'license': 'Other OSI approved licence',
     'category': 'Tools',
