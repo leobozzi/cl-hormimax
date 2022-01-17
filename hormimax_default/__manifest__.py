@@ -45,6 +45,7 @@
         'account_check',
         'account_financial_report',
         'account_journal_lock_date',
+
         'account_menu',
         'partner_statement',
         'account_journal_security',
