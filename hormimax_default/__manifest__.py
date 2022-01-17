@@ -53,7 +53,25 @@
         # --'product_price_taxes_included',
 
         # Localización
+        # All
         'l10n_ar',
+        # 'l10n_ar_bank',
+        # 'l10n_ar_account_withholding',
+        # 'l10n_ar_sale',
+        # 'l10n_ar_stock',
+
+        # CE
+        # 'l10n_ar_afipws_fe',
+        # 'l10n_ar_reports',
+
+        # EE
+        # 'l10n_ar_edi',
+        # 'l10n_ar_account_tax_settlement',
+        # 'l10n_ar_edi_ux',
+        # 'l10n_ar_currency_update',
+
+        # Localización
+        # --'l10n_ar',
         # --'l10n_ar_ux',
         # --'l10n_ar_afipws',
         # --'l10n_ar_afipws_fe',
