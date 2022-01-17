@@ -52,7 +52,7 @@
         'om_account_accountant',
         'accounting_pdf_reports',
         'product_price_taxes_included',
-        'base_accounting_kit',
+        # 'base_accounting_kit',
 
         # Localización
         # All
