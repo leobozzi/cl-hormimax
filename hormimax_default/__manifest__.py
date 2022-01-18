@@ -77,6 +77,7 @@
         'mass_editing',
         # 'muk_web_theme',
         'backend_theme_v13',
+        'odoo_whatsapp_integration',
 
     ],
     'data': [
