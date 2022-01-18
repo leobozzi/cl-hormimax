@@ -75,7 +75,8 @@
         'web_search_with_and',
         'auto_backup',
         'mass_editing',
-        'muk_web_theme',
+        # 'muk_web_theme',
+        'backend_theme_v13',
 
     ],
     'data': [
