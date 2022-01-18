@@ -52,7 +52,7 @@
         'partner_statement',
         'account_journal_security',
         'account_netting',
-        'om_account_accountant',
+        # 'om_account_accountant',
         'accounting_pdf_reports',
         'product_price_taxes_included',
 
