@@ -52,7 +52,6 @@
         'om_account_accountant',
         'accounting_pdf_reports',
         'product_price_taxes_included',
-        # 'base_accounting_kit',
 
         # Localización
         # All
@@ -77,7 +76,6 @@
         'auto_backup',
         'mass_editing',
         'muk_web_theme',
-        # 'crm_kit',
 
     ],
     'data': [
