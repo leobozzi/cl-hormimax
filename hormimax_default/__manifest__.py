@@ -38,6 +38,9 @@
         'board',
         'calendar',
         'website',
+        'crm',
+        'sale_crm_ux',
+        'crm_stage_teams',
 
         # Contabilidad
         'account',
@@ -209,7 +212,7 @@
         # 'https://github.com/OCA/commission oca-commission',
         # 'https://github.com/OCA/contract oca-contract',
         # 'https://github.com/OCA/credit-control oca-credit-control',
-        # 'https://github.com/OCA/crm oca-crm',
+        'https://github.com/OCA/crm oca-crm',
         # 'https://github.com/OCA/currency oca-currency',
         # 'https://github.com/OCA/ddmrp oca-ddmrp',
         # 'https://github.com/OCA/delivery-carrier oca-delivery-carrier',
