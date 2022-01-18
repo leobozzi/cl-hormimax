@@ -77,6 +77,7 @@
         'auto_backup',
         'mass_editing',
         'muk_web_theme',
+        'crm_kit',
 
     ],
     'data': [
