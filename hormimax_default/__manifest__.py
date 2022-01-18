@@ -53,7 +53,7 @@
         'account_journal_security',
         'account_netting',
         # 'om_account_accountant',
-        'accounting_pdf_reports',
+        # 'accounting_pdf_reports',
         'product_price_taxes_included',
 
         # Localización
@@ -193,7 +193,7 @@
 
         # Odoomates
         # ==========================================================================================
-        'https://github.com/odoomates/odooapps odoomates-odooapps',
+        # 'https://github.com/odoomates/odooapps odoomates-odooapps',
 
         # Gabriela Rivero
         # ==========================================================================================
