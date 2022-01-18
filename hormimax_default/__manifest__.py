@@ -75,6 +75,8 @@
         'web_search_with_and',
         'auto_backup',
         'mass_editing',
+        'intero_reload_form',
+        'web_company_color',
         # 'muk_web_theme',
         'backend_theme_v13',
         'odoo_whatsapp_integration',
