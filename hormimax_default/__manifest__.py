@@ -48,7 +48,6 @@
         'account_check',
         'account_financial_report',
         'account_journal_lock_date',
-        'account_statement_import',
         'account_statement_import_txt_xlsx',
         'account_menu',
         'partner_statement',
