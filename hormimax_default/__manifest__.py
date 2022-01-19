@@ -52,8 +52,8 @@
         'partner_statement',
         'account_journal_security',
         'account_netting',
-        # 'om_account_accountant',
-        # 'accounting_pdf_reports',
+        'om_account_accountant',
+        'accounting_pdf_reports',
         'product_price_taxes_included',
 
         # Localización
@@ -80,9 +80,8 @@
         'mass_editing',
         'intero_reload_form',
         'web_company_color',
-        # 'muk_web_theme',
-
-        # 'odoo_whatsapp_integration',
+        'backend_theme_v13',
+        'odoo_whatsapp_integration',
 
     ],
     'data': [
