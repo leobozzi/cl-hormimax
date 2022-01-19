@@ -81,7 +81,7 @@
         'mass_editing',
         'intero_reload_form',
         'web_company_color',
-        'backend_theme_v13',
+        # 'backend_theme_v13',
         'odoo_whatsapp_integration',
 
     ],
