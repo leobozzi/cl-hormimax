@@ -164,7 +164,7 @@
             'log_db_level = warning',
             'log_handler = :INFO',
             'log_level = info',
-            'logfile = /dev/pts/0',
+            'logfile = /var/log/odoo/odoo.log',
             'osv_memory_age_limit = 1.0',
             'osv_memory_count_limit = False',
             'pg_path =',
