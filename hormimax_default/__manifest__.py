@@ -80,8 +80,8 @@
         'mass_editing',
         'intero_reload_form',
         'web_company_color',
-        # 'muk_web_theme',
-        'backend_theme_v13',
+        'muk_web_theme',
+
         # 'odoo_whatsapp_integration',
 
     ],
