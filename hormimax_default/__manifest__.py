@@ -221,7 +221,7 @@
         # 'https://github.com/OCA/e-commerce oca-e-commerce',
         # 'https://github.com/OCA/event oca-event',
         'https://github.com/OCA/field-service oca-field-service',
-        # 'https://github.com/OCA/geospatial oca-geospatial',
+        'https://github.com/OCA/geospatial oca-geospatial',
         # 'https://github.com/OCA/helpdesk oca-helpdesk',
         # 'https://github.com/OCA/hr oca-hr',
         # 'https://github.com/OCA/hr-timesheet oca-hr-timesheet',
