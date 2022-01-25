@@ -58,6 +58,13 @@
         'product_price_taxes_included',
         'sale_last_price_info',
         'purchase_last_price_info',
+        # 'account_lock',
+        'account_lock_date_update',
+        'account_lock_to_date',
+        'purchase_requisition',
+        'purchase_requisition',
+        'purchase_requisition_stock',
+
 
         # Localización
         # All
@@ -67,6 +74,7 @@
         'l10n_ar_sale',
         'l10n_ar_stock',
         'padron_afip',
+        'report_qweb_pdf_watermark',
 
         # CE
         'l10n_ar_ux',
