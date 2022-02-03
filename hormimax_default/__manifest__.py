@@ -64,6 +64,7 @@
         'purchase_requisition',
         'purchase_requisition',
         'purchase_requisition_stock',
+        'account_bank_statement_import_move_line',
 
 
         # Localización
