@@ -41,6 +41,8 @@
         'crm',
         'sale_crm_ux',
         'crm_stage_teams',
+        'base_ux',
+
 
         # Contabilidad
         'account',
@@ -64,10 +66,13 @@
         'purchase_requisition',
         'purchase_requisition_stock',
         'purchase_ux',
-        # 'account_bank_statement_import_txt_xlsx',
-        # 'account_bank_statement_import_move_line',
-        # 'account_statement_move_import',
-        # 'account_bank_statement_import_transfer_move',
+        'account_statement_aeroo_report',
+        'account_bank_statement_clear_partner',
+        'account_bank_statement_import',
+        'account_bank_statement_import_move_line',
+        'account_bank_statement_import_transfer_move',
+        'account_bank_statement_import_txt_xlsx',
+        'account_cash_invoice',
         'sale_ux',
 
 
@@ -229,7 +234,7 @@
         'https://github.com/OCA/account-financial-tools oca-account-financial-tools',
         'https://github.com/OCA/account-payment oca-account-payment',
         # 'https://github.com/OCA/apps-store oca-apps-store',
-        # 'https://github.com/OCA/bank-payment oca-bank-payment',
+        'https://github.com/OCA/bank-payment oca-bank-payment',
         'https://github.com/OCA/bank-statement-import oca-bank-statement-import',
         'https://github.com/OCA/brand oca-brand',
         # 'https://github.com/OCA/business-requirement oca-business-requirement',
@@ -282,7 +287,6 @@
         # 'https://github.com/OCA/vertical-association oca-vertical-association',
         'https://github.com/OCA/web oca-web',
         # 'https://github.com/OCA/website oca-website',
-        # 'https://github.com/OCA/bank-payment oca-bank-payment',
         # 'https://github.com/OCA/account-analytic',
 
         # ADHOC
