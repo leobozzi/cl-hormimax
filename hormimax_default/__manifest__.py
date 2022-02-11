@@ -69,6 +69,7 @@
         'account_statement_aeroo_report',
         'account_bank_statement_clear_partner',
         'account_bank_statement_import',
+        'account_statement_move_import',
         'account_bank_statement_import_move_line',
         'account_bank_statement_import_transfer_move',
         'account_bank_statement_import_txt_xlsx',
