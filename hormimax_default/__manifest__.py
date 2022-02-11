@@ -64,9 +64,11 @@
         'purchase_requisition',
         'purchase_requisition',
         'purchase_requisition_stock',
+        'purchase_ux',
         'account_bank_statement_import_move_line',
         'account_statement_move_import',
         'account_bank_statement_import_transfer_move',
+        'sale_ux',
 
 
         # Localización
@@ -304,7 +306,7 @@
         # 'https://github.com/ingadhoc/partner ingadhoc-partner',
         'https://github.com/ingadhoc/product ingadhoc-product',
         # 'https://github.com/ingadhoc/project ingadhoc-project',
-        # 'https://github.com/ingadhoc/purchase ingadhoc-purchase',
+        'https://github.com/ingadhoc/purchase ingadhoc-purchase',
         'https://github.com/ingadhoc/reporting-engine ingadhoc-reporting-engine',
         'https://github.com/ingadhoc/sale ingadhoc-sale',
         'https://github.com/ingadhoc/stock ingadhoc-stock',
