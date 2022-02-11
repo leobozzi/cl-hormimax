@@ -65,9 +65,9 @@
         'purchase_requisition',
         'purchase_requisition_stock',
         'purchase_ux',
-        'account_bank_statement_import_move_line',
-        'account_statement_move_import',
-        'account_bank_statement_import_transfer_move',
+        # 'account_bank_statement_import_move_line',
+        # 'account_statement_move_import',
+        # 'account_bank_statement_import_transfer_move',
         'sale_ux',
 
 
