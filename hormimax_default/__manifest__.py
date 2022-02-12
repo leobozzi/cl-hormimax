@@ -222,7 +222,7 @@
 
         # Odoomates
         # ==========================================================================================
-        # 'https://github.com/odoomates/odooapps odoomates-odooapps',
+        'https://github.com/odoomates/odooapps odoomates-odooapps',
 
         # Gabriela Rivero
         # ==========================================================================================
