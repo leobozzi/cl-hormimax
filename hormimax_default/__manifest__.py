@@ -55,7 +55,7 @@
         'account_journal_security',
         'account_netting',
         # 'om_account_accountant',
-        'accounting_pdf_reports',
+        # 'accounting_pdf_reports',
         'product_price_taxes_included',
         'sale_last_price_info',
         'purchase_last_price_info',
