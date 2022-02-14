@@ -54,7 +54,7 @@
         'partner_statement',
         'account_journal_security',
         'account_netting',
-        # 'om_account_accountant',
+        'om_account_accountant',
         'accounting_pdf_reports',
         'product_price_taxes_included',
         'sale_last_price_info',
@@ -223,6 +223,10 @@
         # Odoomates
         # ==========================================================================================
         'https://github.com/odoomates/odooapps odoomates-odooapps',
+
+        # CybtoAddons
+        # ==========================================================================================
+        'https://github.com/CybroOdoo/CybroAddons cybro-addons',
 
         # Gabriela Rivero
         # ==========================================================================================
