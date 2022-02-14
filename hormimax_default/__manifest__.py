@@ -43,7 +43,6 @@
         'crm_stage_teams',
         'base_ux',
 
-
         # Contabilidad
         'account',
         'account_ux',
@@ -75,7 +74,6 @@
         'account_bank_statement_import_txt_xlsx',
         'account_cash_invoice',
         'sale_ux',
-
 
         # Localización
         # All
@@ -222,7 +220,7 @@
 
         # Odoomates
         # ==========================================================================================
-        'https://github.com/odoomates/odooapps odoomates-odooapps',
+        # 'https://github.com/odoomates/odooapps odoomates-odooapps',
 
         # CybtoAddons
         # ==========================================================================================
