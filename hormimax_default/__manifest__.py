@@ -42,6 +42,7 @@
         'sale_crm_ux',
         'crm_stage_teams',
         'base_ux',
+        'stock_ux',
 
         # Contabilidad
         'account',
@@ -74,6 +75,11 @@
         'account_bank_statement_import_txt_xlsx',
         'account_cash_invoice',
         'sale_ux',
+        'account_transfer_unreconcile',
+
+        # Cybrosys
+        'base_accounting_kit',
+        'crm_kit',
 
         # Localización
         # All
