@@ -106,6 +106,10 @@
         'hr_timesheet_activity_begin_end',
         'hr_timesheet_analysis',
         'hr_timesheet_attendance',
+        'hr_calendar_rest_time',
+        'hr_employee_age',
+        'hr_employee_calendar_planning',
+        'hr_org_chart_overview',
 
         # Utils
         'web_search_with_and',
@@ -231,6 +235,7 @@
         # CybtoAddons
         # ==========================================================================================
         'https://github.com/CybroOdoo/CybroAddons cybro-addons',
+        'https://github.com/CybroOdoo/OpenHRMS cybro-open-hrms',
 
         # Gabriela Rivero
         # ==========================================================================================
