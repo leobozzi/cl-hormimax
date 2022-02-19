@@ -80,6 +80,8 @@
         # Cybrosys
         'base_accounting_kit',
         'crm_kit',
+        ###################
+
 
         # Localización
         # All
@@ -104,6 +106,8 @@
         'hr_timesheet',
         'hr_timesheet_sheet',
         'hr_timesheet_activity_begin_end',
+
+        #################
         'hr_timesheet_analysis',
         'hr_timesheet_attendance',
         'hr_calendar_rest_time',
@@ -235,11 +239,15 @@
         # CybtoAddons
         # ==========================================================================================
         'https://github.com/CybroOdoo/CybroAddons cybro-addons',
-        'https://github.com/CybroOdoo/OpenHRMS cybro-open-hrms',
+        # 'https://github.com/CybroOdoo/OpenHRMS cybro-open-hrms',
 
         # Gabriela Rivero
         # ==========================================================================================
         'https://github.com/regaby/odoo-custom regaby-odoo-custom',
+
+        # Nimarosa
+        # ==========================================================================================
+        'https://github.com/nimarosa/odoo-l10n_ar_hr_payroll odoo-l10n_ar_hr_payroll',
 
         # OCA
         # ==========================================================================================
