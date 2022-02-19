@@ -43,6 +43,7 @@
         'crm_stage_teams',
         'base_ux',
         'stock_ux',
+        # 'payroll',
 
         # Contabilidad
         'account',
@@ -80,6 +81,8 @@
         # Cybrosys
         'base_accounting_kit',
         'crm_kit',
+        ###################
+
 
         # Localización
         # All
@@ -106,6 +109,15 @@
         'hr_timesheet_activity_begin_end',
         'hr_timesheet_analysis',
         'hr_timesheet_attendance',
+
+        #################
+        'hr_timesheet_analysis',
+        'hr_timesheet_attendance',
+        # 'hr_calendar_rest_time',
+        # 'hr_employee_age',
+        # 'hr_employee_calendar_planning',
+        # 'hr_org_chart_overview',
+        #   'hr_attendance_reason',
 
         # Utils
         'web_search_with_and',
@@ -231,10 +243,15 @@
         # CybtoAddons
         # ==========================================================================================
         'https://github.com/CybroOdoo/CybroAddons cybro-addons',
+        # 'https://github.com/CybroOdoo/OpenHRMS cybro-open-hrms',
 
         # Gabriela Rivero
         # ==========================================================================================
         'https://github.com/regaby/odoo-custom regaby-odoo-custom',
+
+        # Nimarosa
+        # ==========================================================================================
+        # 'https://github.com/nimarosa/odoo-l10n_ar_hr_payroll odoo-l10n_ar_hr_payroll',
 
         # OCA
         # ==========================================================================================
@@ -260,6 +277,8 @@
         'https://github.com/OCA/geospatial oca-geospatial',
         # 'https://github.com/OCA/helpdesk oca-helpdesk',
         'https://github.com/OCA/hr oca-hr',
+        'https://github.com/OCA/hr-attendance oca-hr-attendance',
+        'https://github.com/OCA/hr-holidays oca-hr-holidays',
         'https://github.com/OCA/hr-timesheet oca-hr-timesheet',
         # 'https://github.com/OCA/knowledge oca-knowledge',
         'https://github.com/OCA/stock-logistics-warehouse oca-stock-logistics-warehouse'
@@ -271,6 +290,7 @@
         # 'https://github.com/OCA/oca-custom oca-oca-custom',
         # 'https://github.com/OCA/operating-unit oca-operating-unit',
         # 'https://github.com/OCA/partner-contact oca-partner-contact',
+        'https://github.com/OCA/payroll oca-payroll',
         # 'https://github.com/OCA/pos oca-pos',
         # 'https://github.com/OCA/product-attribute oca-product-attribute',
         # 'https://github.com/OCA/product-pack oca-product-pack',
@@ -292,7 +312,7 @@
         # 'https://github.com/OCA/stock-logistics-transport oca-stock-logistics-transport', # noqa
         # 'https://github.com/OCA/stock-logistics-warehouse oca-stock-logistics-warehouse', # noqa
         'https://github.com/OCA/stock-logistics-workflow oca-stock-logistics-workflow',
-        # 'https://github.com/OCA/timesheet oca-timesheet',
+        'https://github.com/OCA/timesheet oca-timesheet',
         # 'https://github.com/OCA/vertical-association oca-vertical-association',
         'https://github.com/OCA/web oca-web',
         # 'https://github.com/OCA/website oca-website',
@@ -306,7 +326,7 @@
         'https://github.com/ingadhoc/aeroo_reports ingadhoc-aeroo_reports',
         'https://github.com/ingadhoc/argentina-reporting ingadhoc-argentina-reporting',
         'https://github.com/ingadhoc/argentina-sale ingadhoc-argentina-sale',
-        # 'https://github.com/ingadhoc/hr ingadhoc-hr',
+        'https://github.com/ingadhoc/hr ingadhoc-hr',
         'https://github.com/ingadhoc/miscellaneous ingadhoc-miscellaneous',
         # 'https://github.com/ingadhoc/multi-company ingadhoc-multi-company',
         # 'https://github.com/ingadhoc/multi-store ingadhoc-multi-store',
