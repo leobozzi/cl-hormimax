@@ -80,7 +80,6 @@
         # Cybrosys
         'base_accounting_kit',
         'crm_kit',
-        'dynamic_accounts_report',
         ###################
 
 
