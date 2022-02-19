@@ -324,7 +324,7 @@
         'https://github.com/ingadhoc/aeroo_reports ingadhoc-aeroo_reports',
         'https://github.com/ingadhoc/argentina-reporting ingadhoc-argentina-reporting',
         'https://github.com/ingadhoc/argentina-sale ingadhoc-argentina-sale',
-        # 'https://github.com/ingadhoc/hr ingadhoc-hr',
+        'https://github.com/ingadhoc/hr ingadhoc-hr',
         'https://github.com/ingadhoc/miscellaneous ingadhoc-miscellaneous',
         # 'https://github.com/ingadhoc/multi-company ingadhoc-multi-company',
         # 'https://github.com/ingadhoc/multi-store ingadhoc-multi-store',
