@@ -43,7 +43,7 @@
         'crm_stage_teams',
         'base_ux',
         'stock_ux',
-        'payroll',
+        # 'payroll',
 
         # Contabilidad
         'account',
