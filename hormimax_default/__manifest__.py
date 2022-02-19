@@ -43,6 +43,7 @@
         'crm_stage_teams',
         'base_ux',
         'stock_ux',
+        'payroll',
 
         # Contabilidad
         'account',
@@ -114,6 +115,7 @@
         'hr_employee_age',
         'hr_employee_calendar_planning',
         'hr_org_chart_overview',
+        'hr_attendance_reason',
 
         # Utils
         'web_search_with_and',
