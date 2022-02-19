@@ -241,7 +241,7 @@
         # CybtoAddons
         # ==========================================================================================
         'https://github.com/CybroOdoo/CybroAddons cybro-addons',
-        # 'https://github.com/CybroOdoo/OpenHRMS cybro-open-hrms',
+        'https://github.com/CybroOdoo/OpenHRMS cybro-open-hrms',
 
         # Gabriela Rivero
         # ==========================================================================================
