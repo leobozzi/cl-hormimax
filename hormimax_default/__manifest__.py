@@ -310,7 +310,7 @@
         # 'https://github.com/OCA/stock-logistics-transport oca-stock-logistics-transport', # noqa
         # 'https://github.com/OCA/stock-logistics-warehouse oca-stock-logistics-warehouse', # noqa
         'https://github.com/OCA/stock-logistics-workflow oca-stock-logistics-workflow',
-        # 'https://github.com/OCA/timesheet oca-timesheet',
+        'https://github.com/OCA/timesheet oca-timesheet',
         # 'https://github.com/OCA/vertical-association oca-vertical-association',
         'https://github.com/OCA/web oca-web',
         # 'https://github.com/OCA/website oca-website',
