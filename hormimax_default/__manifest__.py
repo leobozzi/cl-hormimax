@@ -260,6 +260,8 @@
         'https://github.com/OCA/geospatial oca-geospatial',
         # 'https://github.com/OCA/helpdesk oca-helpdesk',
         'https://github.com/OCA/hr oca-hr',
+        'https://github.com/OCA/hr-attendance oca-hr-attendance',
+        'https://github.com/OCA/hr-holidays oca-hr-holidays',
         'https://github.com/OCA/hr-timesheet oca-hr-timesheet',
         # 'https://github.com/OCA/knowledge oca-knowledge',
         'https://github.com/OCA/stock-logistics-warehouse oca-stock-logistics-warehouse'
@@ -292,7 +294,7 @@
         # 'https://github.com/OCA/stock-logistics-transport oca-stock-logistics-transport', # noqa
         # 'https://github.com/OCA/stock-logistics-warehouse oca-stock-logistics-warehouse', # noqa
         'https://github.com/OCA/stock-logistics-workflow oca-stock-logistics-workflow',
-        # 'https://github.com/OCA/timesheet oca-timesheet',
+        'https://github.com/OCA/timesheet oca-timesheet',
         # 'https://github.com/OCA/vertical-association oca-vertical-association',
         'https://github.com/OCA/web oca-web',
         # 'https://github.com/OCA/website oca-website',
@@ -306,7 +308,7 @@
         'https://github.com/ingadhoc/aeroo_reports ingadhoc-aeroo_reports',
         'https://github.com/ingadhoc/argentina-reporting ingadhoc-argentina-reporting',
         'https://github.com/ingadhoc/argentina-sale ingadhoc-argentina-sale',
-        # 'https://github.com/ingadhoc/hr ingadhoc-hr',
+        'https://github.com/ingadhoc/hr ingadhoc-hr',
         'https://github.com/ingadhoc/miscellaneous ingadhoc-miscellaneous',
         # 'https://github.com/ingadhoc/multi-company ingadhoc-multi-company',
         # 'https://github.com/ingadhoc/multi-store ingadhoc-multi-store',
