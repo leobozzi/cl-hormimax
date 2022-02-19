@@ -249,7 +249,7 @@
 
         # Nimarosa
         # ==========================================================================================
-        # 'https://github.com/nimarosa/odoo-l10n_ar_hr_payroll odoo-l10n_ar_hr_payroll',
+        'https://github.com/nimarosa/odoo-l10n_ar_hr_payroll odoo-l10n_ar_hr_payroll',
 
         # OCA
         # ==========================================================================================
