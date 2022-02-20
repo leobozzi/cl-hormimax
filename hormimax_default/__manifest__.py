@@ -43,6 +43,7 @@
         'crm_stage_teams',
         'base_ux',
         'stock_ux',
+        'payroll',
 
         # Contabilidad
         'account',
@@ -104,11 +105,12 @@
         'hr_timesheet',
         # 'hr_timesheet_sheet',
         # 'hr_timesheet_activity_begin_end',
-        # 'hr_timesheet_analysis',
-        # 'hr_timesheet_attendance',
+        'hr_timesheet_analysis',
+        'hr_timesheet_attendance',
 
         ####
-        # 'hr_timesheet_attendance_ux',
+        'hr_timesheet_attendance_ux',
+        'payroll_account',
 
         # Utils
         'web_search_with_and',
@@ -226,6 +228,8 @@
     'git-repos': [
         'https://github.com/leobozzi/cl-hormimax.git',
         'https://github.com/leobozzi/odoo-addons-utils bit-odoo-addons-utils',
+        'https://github.com/leobozzi/odoo-custom bit-odoo-custom',
+
 
         # Odoomates
         # ==========================================================================================
