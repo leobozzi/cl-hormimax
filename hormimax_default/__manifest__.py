@@ -102,10 +102,13 @@
 
         # HR
         'hr_timesheet',
-        'hr_timesheet_sheet',
-        'hr_timesheet_activity_begin_end',
-        'hr_timesheet_analysis',
-        'hr_timesheet_attendance',
+        # 'hr_timesheet_sheet',
+        # 'hr_timesheet_activity_begin_end',
+        # 'hr_timesheet_analysis',
+        # 'hr_timesheet_attendance',
+
+        ####
+        # 'hr_timesheet_attendance_ux',
 
         # Utils
         'web_search_with_and',
