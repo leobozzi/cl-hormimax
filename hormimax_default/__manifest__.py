@@ -107,10 +107,11 @@
         # 'hr_timesheet_activity_begin_end',
         'hr_timesheet_analysis',
         'hr_timesheet_attendance',
-
-        ####
         'hr_timesheet_attendance_ux',
         'payroll_account',
+
+        # Custom
+        'bit_timesheet_custom',
 
         # Utils
         'web_search_with_and',
