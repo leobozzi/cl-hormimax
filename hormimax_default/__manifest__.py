@@ -108,10 +108,12 @@
         'hr_timesheet_analysis',
         'hr_timesheet_attendance',
         'hr_timesheet_attendance_ux',
+        'sale_timesheet_ux',
         'payroll_account',
 
         # Custom
         'bit_timesheet_custom',
+        'bit_attendance_custom',
 
         # Utils
         'web_search_with_and',
