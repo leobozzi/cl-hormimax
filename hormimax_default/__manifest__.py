@@ -279,6 +279,7 @@
         'https://github.com/OCA/manufacture oca-manufacture',
         'https://github.com/OCA/manufacture-reporting oca-manufacture-reporting',
         'https://github.com/OCA/margin-analysis oca-margin-analysis',
+        'https://github.com/OCA/mis-builder oca-mis-builder',
         # 'https://github.com/OCA/multi-company oca-multi-company',
         # 'https://github.com/OCA/oca-custom oca-oca-custom',
         # 'https://github.com/OCA/operating-unit oca-operating-unit',
