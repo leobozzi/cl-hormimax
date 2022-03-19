@@ -44,6 +44,7 @@
         'base_ux',
         'stock_ux',
         'payroll',
+        'mrp',
 
         # Contabilidad
         'account',
@@ -63,7 +64,6 @@
         # 'account_lock',
         'account_lock_date_update',
         'account_lock_to_date',
-        'purchase_requisition',
         'purchase_requisition',
         'purchase_requisition_stock',
         'purchase_ux',
@@ -110,6 +110,18 @@
         'hr_timesheet_attendance_ux',
         'sale_timesheet_ux',
         'payroll_account',
+
+        # MRP
+        'mrp_bom_component_menu',
+        'mrp_bom_current_stock',
+        'mrp_bom_line_sequence',
+        'mrp_bom_structure_report_level_1',
+        'mrp_bom_structure_xlsx',
+        'mrp_bom_structure_xlsx_level_1',
+        'mrp_production_grouped_by_product',
+        'mrp_production_note',
+        'mrp_production_request',
+        'mrp_workorder_sequence',
 
         # Custom
         'bit_timesheet_custom',
