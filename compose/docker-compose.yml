@@ -44,7 +44,7 @@ services:
 
   odoo:
     image: ${ODOO_IMAGE}
-    container_name: odoo2
+    container_name: odoo
     restart: unless-stopped
     volumes:
       - ${PROJECT_PATH}/config:/opt/odoo/etc/
