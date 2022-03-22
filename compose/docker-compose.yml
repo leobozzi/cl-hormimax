@@ -44,7 +44,7 @@ services:
 
   odoo:
     image: ${ODOO_IMAGE}
-    container_name: odoo
+    container_name: odoo2
     restart: unless-stopped
     volumes:
       - ${PROJECT_PATH}/config:/opt/odoo/etc/
@@ -86,7 +86,7 @@ services:
 
       # Redirecciona rou-odoo-secure al puert 8069 donde escucha odoo
       - traefik.http.routers.rou-odoo-secure.service=srv-odoo-secure
-      - traefik.http.services.srv-odoo-secure.loadbalancer.server.port=8069
+      - traefik.http.services.srv-odoo-secure.loadbalancer.server.port=${ODOO_PORT}
 
       # Router rou-chat-secure --> Acceso a odoo en puerto 443
       - traefik.http.routers.rou-chat-secure.rule=(Host(`${SITE_DOMAIN}`)) && PathPrefix(`/longpolling`)
@@ -96,4 +96,4 @@ services:
 
       # redirecciona rout-chat-secure al puerto 8072 donde odoo escucha el longpolling
       - traefik.http.routers.rou-chat-secure.service=srv-chat-secure
-      - traefik.http.services.srv-chat-secure.loadbalancer.server.port=8072
+      - traefik.http.services.srv-chat-secure.loadbalancer.server.port=${CHAT_PORT}
