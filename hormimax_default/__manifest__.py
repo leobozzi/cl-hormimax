@@ -118,11 +118,11 @@
         'mrp_bom_structure_report_level_1',
         'mrp_bom_structure_xlsx',
         'mrp_bom_structure_xlsx_level_1',
-        'mrp_production_grouped_by_product',
+        # 'mrp_production_grouped_by_product',
         'mrp_production_note',
         'mrp_production_request',
         'mrp_workorder_sequence',
-        'mrp_sale_info',
+        # 'mrp_sale_info',
 
         # Custom
         'bit_timesheet_custom',
