@@ -122,6 +122,7 @@
         'mrp_production_note',
         'mrp_production_request',
         'mrp_workorder_sequence',
+        'mrp_sale_info',
 
         # Custom
         'bit_timesheet_custom',
