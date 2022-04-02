@@ -127,6 +127,7 @@
         # Custom
         'bit_timesheet_custom',
         'bit_attendance_custom',
+        'bit_mrp_sale_info_custom',
 
         # Utils
         'web_search_with_and',
