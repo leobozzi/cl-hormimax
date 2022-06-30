@@ -309,7 +309,7 @@
         # 'https://github.com/OCA/project oca-project',
         # 'https://github.com/OCA/project-reporting oca-project-reporting',
         'https://github.com/OCA/purchase-workflow oca-purchase-workflow',
-        # 'https://github.com/OCA/queue oca-queue',
+        'https://github.com/OCA/queue oca-queue',
         # 'https://github.com/OCA/report-print-send oca-report-print-send',
         'https://github.com/OCA/reporting-engine oca-reporting-engine',
         # 'https://github.com/OCA/sale-reporting oca-sale-reporting',
