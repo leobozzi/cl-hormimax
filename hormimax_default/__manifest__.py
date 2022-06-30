@@ -140,7 +140,6 @@
         'odoo_whatsapp_integration',
         'mis_builder',
         'mis_builder_cash_flow',
-        'mis_builder_demo',
 
 
     ],
