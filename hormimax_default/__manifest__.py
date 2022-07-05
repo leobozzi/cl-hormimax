@@ -144,6 +144,7 @@
 
     ],
     'data': [
+        'view/report_sale_order.xml',
     ],
     'test': [
     ],
