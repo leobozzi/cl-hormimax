@@ -145,6 +145,7 @@
     ],
     'data': [
         'view/report_sale_order.xml',
+        'view/report_invoice_presupuesto.xml',
     ],
     'test': [
     ],

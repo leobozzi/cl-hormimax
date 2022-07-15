@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Template Header -->
+        <template id="custom_header">
+            <div>
+                <div class="row">
+                    <div name="left-upper-side" class="col-5"></div>
+                    <div name="center-upper" class="col-2 text-center"></div>
+                    <div name="right-upper-side" class="col-5 text-right" style="padding-left: 0px;">
+                        <!-- (6) Titulo de Documento -->
+                        <h4 t-att-style="'color: %s;' % o.company_id.primary_color">
+                            <strong>
+                                <span>PRESUPUESTO</span>
+                            </strong>
+                        </h4>
+                    </div>
+                </div>
+                <div class="row mt8 mb8">
+                    <div class="col-6" style="padding-right: 0px;">
+                        <!-- IDENTIFICACION (ADQUIRIENTE-LOCATARIO-PRESTARIO) -->
+
+                        <!-- (14) Apellido uy Nombre: Denominicacion o Razon Soclial -->
+                        <strong>Cliente: </strong>
+                        <span t-field="o.partner_id.commercial_partner_id.name" />
+
+                        <!-- (15) Domicilio Comercial -->
+                        <br />
+                        <span t-field="o.partner_id" t-options="{'widget': 'contact', 'fields': ['address'], 'no_marker': true, 'no_tag_br': True}" />
+
+                        <!-- (16) Responsabilidad AFIP -->
+                        <span t-field="o.partner_id.l10n_ar_afip_responsibility_type_id" />
+
+                        <!-- (17) CUIT -->
+                        <t t-if="o.partner_id.vat and o.partner_id.l10n_latam_identification_type_id and o.partner_id.l10n_latam_identification_type_id.l10n_ar_afip_code != '99'">
+                            <br />
+                            <strong>
+                                <t t-esc="o.partner_id.l10n_latam_identification_type_id.name or o.company_id.account_fiscal_country_id.vat_label" id="inv_tax_id_label" />
+                                :
+                            </strong>
+                            <span t-esc="o.partner_id.l10n_ar_formatted_vat if o.partner_id.l10n_latam_identification_type_id.is_vat else o.partner_id.vat" />
+                        </t>
+
+                    </div>
+                    <div class="col-6 text-right" style="padding-left: 0px;">
+                        <t t-if="not pre_printed_report">
+                            <!-- (7) Numero punto venta - (8) numero de documento -->
+                            <span t-att-style="'color: %s;' % o.company_id.secondary_color">Nro: </span>
+                            <span t-esc="report_number" />
+                        </t>
+                        <br />
+                        <!-- (9) Fecha -->
+                        <span t-att-style="'color: %s;' % o.company_id.secondary_color">Fecha: </span>
+                        <span t-esc="report_date" t-options='{"widget": "date"}' />
+                        <br />
+                        <!-- (10) Vencimiento -->
+                        <span t-att-style="'color: %s;' % o.company_id.secondary_color">Vencimiento: </span>
+                        <span t-esc="report_date_due" t-options='{"widget": "date"}' />
+                        <br />
+                        <!-- (11) Origen -->
+                        <t t-if="report_origin">
+                            <span t-att-style="'color: %s;' % o.company_id.secondary_color">Origen: </span>
+                            <span t-esc="report_origin" />
+                        </t>
+                        <br />
+                        <!-- (12) Referencia  -->
+                        <t t-if="report_reference">
+                            <span t-att-style="'color: %s;' % o.company_id.secondary_color">Origen: </span>
+                            <span t-esc="report_reference" />
+                        </t>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Template Page -->
+        <template id="report_invoice_presupuesto_document">
+            <t t-call="web.external_layout">
+                <t t-set="o" t-value="o.with_context(lang=lang)" />
+                <t t-set="custom_header" t-value="'infas_default.custom_header'" />
+                <t t-set="report_date" t-value="o.invoice_date" />
+                <t t-set="report_date_due" t-value="o.invoice_date_due" />
+                <t t-set="report_origin" t-value="o.invoice_origin" />
+                <t t-set="report_reference" t-value="o.ref" />
+                <t t-set="report_number" t-value="o.l10n_latam_document_number" />
+                <t t-set="pre_printed_report" t-value="report_type == 'pdf' and o.journal_id.l10n_ar_afip_pos_system == 'II_IM'" />
+                <t t-set="document_letter" t-value="o.l10n_latam_document_type_id.l10n_ar_letter" />
+                <t t-set="document_legend" t-value="o.l10n_latam_document_type_id.code and 'Cod. %02d' % int(o.l10n_latam_document_type_id.code) or ''" />
+                <t t-set="header_address" t-value="o.journal_id.l10n_ar_afip_pos_partner_id" />
+
+                <t t-set="custom_footer">
+                    <div class="row">
+                        <div name="footer_left_column" class="col-8 text-left"></div>
+                        <div name="footer_right_column" class="col-4 text-right">
+                            <div name="pager" t-if="report_type == 'pdf'">
+                                Pág:
+                                <span class="page" />
+                                /
+                                <span class="topage" />
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                <div class="page mt8 mb8">
+                    <div class="row">
+                        <br />
+                    </div>
+                    <table class="table table-sm o_main_table" name="invoice_line_table" style="font-size:12px;">
+                        <thead>
+                            <tr>
+                                <th name="th_description" class="text-left">
+                                    <span>Descripción</span>
+                                </th>
+                                <th name="th_quantity" class="text-right">
+                                    <span>Cantidad</span>
+                                </th>
+                                <th name="th_priceunit" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                    <span>Precio Unitario</span>
+                                </th>
+                                <th name="th_price_unit" t-if="display_discount" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                    <span>Desc.%</span>
+                                </th>
+                                <th name="th_taxes" t-attf-class="text-left {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                    <span>Imp.</span>
+                                </th>
+                                <th name="th_subtotal" class="text-right">
+                                    <span groups="account.group_show_line_subtotals_tax_excluded">Amount</span>
+                                    <span groups="account.group_show_line_subtotals_tax_included">Total</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="invoice_tbody">
+                            <t t-set="current_subtotal" t-value="0" />
+                            <t t-set="lines" t-value="o.invoice_line_ids.sorted(key=lambda l: (-l.sequence, l.date, l.move_name, -l.id), reverse=True)" />
+
+                            <t t-foreach="lines" t-as="line">
+                                <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded" />
+                                <t t-set="current_subtotal" t-value="current_subtotal + line.price_total" groups="account.group_show_line_subtotals_tax_included" />
+
+                                <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                                    <t t-if="not line.display_type" name="account_invoice_line_accountable">
+                                        <td name="account_invoice_line_name">
+                                            <span t-field="line.name" t-options="{'widget': 'text'}" />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.quantity" />
+                                            <span t-field="line.product_uom_id" groups="uom.group_uom" />
+                                        </td>
+                                        <td t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                            <span class="text-nowrap" t-field="line.price_unit" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                        </td>
+                                        <td t-if="display_discount" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                            <span class="text-nowrap" t-field="line.discount" />
+                                        </td>
+                                        <td t-attf-class="text-left {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                            <span t-esc="', '.join(map(lambda x: (x.description or x.name), line.tax_ids))" id="line_tax_ids" />
+                                        </td>
+                                        <td class="text-right o_price_total">
+                                            <span class="text-nowrap" t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded" />
+                                            <span class="text-nowrap" t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included" />
+                                        </td>
+                                    </t>
+                                    <t t-if="line.display_type == 'line_section'">
+                                        <td colspan="99">
+                                            <span t-field="line.name" t-options="{'widget': 'text'}" />
+                                        </td>
+                                        <t t-set="current_section" t-value="line" />
+                                        <t t-set="current_subtotal" t-value="0" />
+                                    </t>
+                                    <t t-if="line.display_type == 'line_note'">
+                                        <td colspan="99">
+                                            <span t-field="line.name" t-options="{'widget': 'text'}" />
+                                        </td>
+                                    </t>
+                                </tr>
+                                <t t-if="current_section and (line_last or lines[line_index+1].display_type == 'line_section')">
+                                    <tr class="is-subtotal text-right">
+                                        <td colspan="99">
+                                            <strong class="mr16">Subtotal</strong>
+                                            <span t-esc="current_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                    <div class="clearfix" style="font-size:12px;">
+                        <div id="total" class="row">
+                            <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ml-auto">
+                                <table class="table table-sm" style="page-break-inside: avoid;">
+                                    <!--Tax totals-->
+                                    <t t-set="tax_totals" t-value="json.loads(o.tax_totals_json)" />
+                                    <t t-call="account.document_tax_totals" />
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <!-- Template -->
+        <template id="report_invoice_presupuesto">
+            <t t-call="web.html_container">
+                <t t-as="o" t-foreach="docs">
+                    <t t-set="lang" t-value="o.partner_id.lang" />
+                    <t t-set="print_with_payments" t-value="False" />
+                    <t t-call="infas_default.report_invoice_presupuesto_document" t-lang="lang" />
+                </t>
+            </t>
+        </template>
+
+        <!-- Add report -->
+        <report id="infas_report_invoice_presupuesto" model="account.move" name="infas_default.report_invoice_presupuesto" report_type="qweb-pdf" string="Presupuesto" />
+
+    </data>
+</odoo>
+        
