@@ -78,7 +78,7 @@
         <template id="report_invoice_presupuesto_document">
             <t t-call="web.external_layout">
                 <t t-set="o" t-value="o.with_context(lang=lang)" />
-                <t t-set="custom_header" t-value="'infas_default.custom_header'" />
+                <t t-set="custom_header" t-value="'hormimax_default.custom_header'" />
                 <t t-set="report_date" t-value="o.invoice_date" />
                 <t t-set="report_date_due" t-value="o.invoice_date_due" />
                 <t t-set="report_origin" t-value="o.invoice_origin" />
@@ -206,13 +206,13 @@
                 <t t-as="o" t-foreach="docs">
                     <t t-set="lang" t-value="o.partner_id.lang" />
                     <t t-set="print_with_payments" t-value="False" />
-                    <t t-call="infas_default.report_invoice_presupuesto_document" t-lang="lang" />
+                    <t t-call="hormimax_default.report_invoice_presupuesto_document" t-lang="lang" />
                 </t>
             </t>
         </template>
 
         <!-- Add report -->
-        <report id="infas_report_invoice_presupuesto" model="account.move" name="infas_default.report_invoice_presupuesto" report_type="qweb-pdf" string="Presupuesto" />
+        <report id="hormimax_report_invoice_presupuesto" model="account.move" name="hormimax_default.report_invoice_presupuesto" report_type="qweb-pdf" string="Presupuesto" />
 
     </data>
 </odoo>
