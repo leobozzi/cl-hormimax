@@ -79,8 +79,8 @@
         'account_transfer_unreconcile',
 
         # Cybrosys
-        'base_accounting_kit',
-        'crm_kit',
+        #'base_accounting_kit',
+        #'crm_kit',
 
         # Localización
         # All
@@ -116,8 +116,8 @@
         'mrp_bom_current_stock',
         'mrp_bom_line_sequence',
         'mrp_bom_structure_report_level_1',
-        'mrp_bom_structure_xlsx',
-        'mrp_bom_structure_xlsx_level_1',
+        #'mrp_bom_structure_xlsx',
+        #'mrp_bom_structure_xlsx_level_1',
         # 'mrp_production_grouped_by_product',
         'mrp_production_note',
         'mrp_production_request',
