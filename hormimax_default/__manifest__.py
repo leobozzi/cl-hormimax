@@ -144,8 +144,11 @@
 
     ],
     'data': [
+        'security/ir.model.access.csv',
         'view/report_sale_order.xml',
         'view/report_invoice_presupuesto.xml',
+        'view/quality_control_notification.xml',
+        'data/stock_move_quality_control.xml',
     ],
     'test': [
     ],

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Quality Control Notification FORM view-->
+    <record id="quality_control_notification_form_view" model="ir.ui.view">
+        <field name="name">quality_control_notification_form_view</field>
+        <field name="model">quality.control.notification</field>
+        <field name="arch" type="xml">
+            <form>
+                <header></header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_top_left">
+                            <field name="product_family" />
+                            <field name="last_quantity" />
+                            <field name="actual_quantity" />
+                        </group>
+                        <group name="group_top_right">
+                            <field name="date" />
+                            <field name="notification" />
+                        </group>
+                    </group>
+                </sheet>
+                <!-- mail mixin fields -->
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers" />
+					<field name="activity_ids" widget="mail_activity" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Quality Control Notification TREE view-->
+    <record id="quality_control_notification_tree_view" model="ir.ui.view">
+        <field name="name">quality_control_notification_tree_view</field>
+        <field name="model">quality.control.notification</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date" />
+                <field name="product_family" />
+                <field name="last_quantity" />
+                <field name="actual_quantity" />
+                <field name="notification" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Quality Control Notification ACTIONS window -->
+	<record id="action_quality_control_notification" model="ir.actions.act_window">
+		<field name="name">Control de Calidad</field>
+		<field name="res_model">quality.control.notification</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+    <!-- Quality Control Notification Menu -->
+	<menuitem id="quality_control_notification_menu" name="Control de Calidad" parent="stock.menu_warehouse_report" action="action_quality_control_notification" sequence="220" />
+	
+</odoo>
