@@ -35,7 +35,7 @@ class StockMoveQualityControl(models.Model):
                 'date': datetime.datetime.today(),
                 'notification': "Notificación inicial",
             }
-            last_notification_id = self.env['quality.control.notification'].create(
+            last_notification = self.env['quality.control.notification'].create(
                 vals)
 
             display_msg = """ Alerta inicial: <br/>"""
